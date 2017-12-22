@@ -1,0 +1,202 @@
+@import './variables';
+@import './templates';
+@import './mixins';
+@import './fonts';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  //background: url("img/hp.png");
+  //height: 5480px;
+  color: $color--text;
+ // background-position-y: -44px;
+  line-height: 1.5;
+  font-family: 'Merriweather', serif;
+}
+
+.header {
+  @extend .container;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &__logo {
+    &:hover {
+      color: $color--secondary;
+    }
+  }
+  &__contact {
+    color: $color--secondary;
+    padding-bottom: 1px;
+    border-bottom: 2px solid $color--secondary;
+    &:hover {
+      color: $color--text;
+      border-bottom: 2px solid $color--text;
+    }
+  }
+  &__logo-link,
+  &__contact-link {
+    @extend .link
+  }
+  &__about {
+    font-size: 25px;
+    font-weight: 700;
+    width: 750px;
+    margin-bottom: 50px;
+    line-height: 1.5;
+  }
+  &__name {
+    color: $color--secondary;
+  }
+  &__job-title {
+    color: $color--primary;
+  }
+  &__contact-buttons{
+    @extend .list--horizontal;
+    margin-left: -6px;
+  }
+  &__contact-button{
+    @extend .link;
+    @extend .button;
+    &--cv{
+      background-color: $color--secondary;
+    }
+    &--projects{
+      background-color: $color--additional;
+    }
+    &--linkedin{
+      background-color: $color--primary;
+    }
+  }
+}
+.projects{
+  @extend .container;
+  &__project{
+  }
+  &__item{
+    @extend .screen;
+    margin-bottom: 200px;
+  }
+}
+.project{
+  height: 500px;
+  display: flex;
+  border: 3px solid $color--clearGray;
+  &__illustration{
+    
+  }
+  &__image-wrapper{
+    overflow: hidden;
+    width: 468px;
+  }
+  &__image{
+    width: 100%;
+  }
+  &__description{
+    padding-left: 60px;
+    padding-bottom: 29px;
+    padding-top: 43px;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title{
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  &__about{
+    font-size: 14px;
+    line-height: 2;
+  }
+  &__date,&__tags{
+    text-transform: uppercase;
+    color: rgba($color--text, 0.4);
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+
+  }
+}
+.blog{
+  @extend .container;
+  @extend .screen;
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__article{
+    margin-right: 19px;
+    margin-bottom: 20px;
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+  }
+  &__title{
+    font-size:40px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  &__description{
+    width: 700px;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 30px;
+  }
+}
+.article{
+    width: 300px;
+    font-weight: 900;
+    &__image-wrapper{
+      overflow: hidden;
+      width: 100%;
+    }
+    &__image{
+      width: 100%;
+    }
+    &__date{
+      margin-top: 20px;
+      font-size: 14px;
+      color: rgba($color--text, 0.4);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+    &__title{
+      font-size: 16px;
+      line-height: 1.4;
+      margin-top: 5px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+}
+.footer{
+  background-color: #161130;
+  color: rgba($color--bg,0.5);
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  &__links{
+    @extend .list--horizontal;
+    @extend .container;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &__link{
+    @extend .link;
+  }
+}

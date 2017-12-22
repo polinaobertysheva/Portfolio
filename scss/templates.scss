@@ -1,0 +1,45 @@
+@import './variables';
+
+.container{
+  width:940px; 
+  margin: 0 auto;
+  padding-top: 50px; 
+  padding-bottom: 50px;
+}
+.screen{
+  height: 600px;
+}
+.link{
+  color: inherit;
+  text-decoration: none;
+  &:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.list--horizontal{
+  list-style: none;
+  padding-left: 0;
+  > * {
+    list-style: none;
+    display: inline-block;
+    padding-right: 20px;
+    &:last-child{
+      padding-right: 0;
+    }
+  }
+}
+.button{
+  color: $color--bg;
+  background-color: $color--text;
+  padding: 17px 35px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 50px;
+  display: inline-block;
+  &:hover{
+    color: $color--bg;
+    opacity: 0.8;
+  }
+}
