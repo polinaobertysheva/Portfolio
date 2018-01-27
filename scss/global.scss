@@ -13,7 +13,10 @@ body {
   color: $color--text;
  // background-position-y: -44px;
   line-height: 1.5;
-  font-family: 'Merriweather', serif;
+  //font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+
 }
 
 .header {
@@ -23,7 +26,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   font-family: 'Montserrat', sans-serif;
-
+  &__internal{
+    height: 130px;
+  }
   &__navigation {
     display: flex;
     justify-content: space-between;
@@ -49,11 +54,21 @@ body {
     @extend .link
   }
   &__about {
-    font-size: 25px;
-    font-weight: 700;
-    width: 750px;
-    margin-bottom: 50px;
-    line-height: 1.5;
+    &--main{
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 2;
+      width: 800px;
+      margin-bottom: 0;
+    }
+    &--detailed{
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 50px;
+      margin-top: 0;
+      line-height: 2;
+      width: 800px;
+    }
   }
   &__name {
     color: $color--secondary;
@@ -61,22 +76,23 @@ body {
   &__job-title {
     color: $color--primary;
   }
-  &__contact-buttons{
-    @extend .list--horizontal;
-    margin-left: -6px;
+}
+.contact-buttons{
+  @extend .list--horizontal;
+  margin-left: -6px;
+  margin-bottom: 30px;
+}
+.contact-button{
+  @extend .link;
+  @extend .button;
+  &--cv{
+    background-color: $color--secondary;
   }
-  &__contact-button{
-    @extend .link;
-    @extend .button;
-    &--cv{
-      background-color: $color--secondary;
-    }
-    &--projects{
-      background-color: $color--additional;
-    }
-    &--linkedin{
-      background-color: $color--primary;
-    }
+  &--projects{
+    background-color: $color--additional;
+  }
+  &--linkedin{
+    background-color: $color--primary;
   }
 }
 .projects{
@@ -115,9 +131,10 @@ body {
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    line-height: 1.4
   }
   &__about{
-    font-size: 14px;
+    font-size: 15px;
     line-height: 2;
   }
   &__date,&__tags{
@@ -155,6 +172,18 @@ body {
     font-size: 16px;
     line-height: 2;
     margin-bottom: 30px;
+  }
+  &__internal{
+    //border-top: 4px solid $color--clearGray;
+    width: 100%;
+    background-color: $color--clearGray;
+    margin-top: 100px;
+    padding-top: 90px;
+    height: inherit;
+  }
+  &__wrapper{
+    width:940px;
+    margin: auto;
   }
 }
 .article{
@@ -198,5 +227,107 @@ body {
   }
   &__link{
     @extend .link;
+  }
+}
+.paragraphe{
+  width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 2;
+
+  &__title{
+    font-size: 30px;
+    font-weight: 600;
+    color: $color--black;
+  }
+  &__text{
+    margin-top: 45px;
+    margin-bottom: 45px;
+    &:nth-child(2){
+      margin-top: 20px;
+    }
+  }
+  &__list{
+    margin-top: -20px;
+  }
+  &__list{
+  }
+  &__small-image-wrapper{
+    width: 710px;
+  }
+  &__middle-image-wrapper{
+    width: 130%;
+    position: relative;
+    left: -15%;
+    right: 50%;
+  }
+  &__big-image-wrapper{
+    width: 200%;
+    position: relative;
+    left: -50%;
+    right: 100%;
+  }
+  &__small-image, &__middle-image, &__big-image{
+    max-width: 100%;
+  }
+}
+.color-insertion{
+  margin-top: 90px;
+  background-color: $color--secondary;
+  &__content{
+    width: 730px;
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 1.7;
+  }
+  &--yellow{
+    background-color: $color--additional;
+  }
+  &--violet{
+    background-color: $color--primary;
+  }
+}
+.case-study{
+  width: 1280px;
+  margin: 0 auto;
+  &__header{
+  }
+  &__date,&__tags{
+    text-transform: uppercase;
+    font-size: 20px;
+    opacity: 0.4;
+    font-weight: 300;
+    text-align: center;
+  }
+  &__title{
+    font-size: 50px;
+    font-weight: bold;
+    color: $color--black;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  &__image-wrapper{
+    margin-top: 90px;
+  }
+  &__image{
+    width: 100%;
+  }
+  &__overview{
+    margin-top: -400px;
+  }
+  &__color-insertion{
+    padding-top: 90px;
+    padding-bottom: 90px;
+    width: 100%;
+    color:$color--bg;
+  }
+  &__contact-buttons{
+    margin-top: 80px;
+    width: 110%;
+    margin-left: -1%;
   }
 }
