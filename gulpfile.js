@@ -10,7 +10,10 @@ const BrowserSync = require('browser-sync').create();
 Gulp.task('sass', () => Gulp.src([
   // Example to add CSS dependencies from npm (after doing `npm install bootstrap`):
   // (to get the /dist/... path, just look into the corresponding "node_modules" folder)
-  require.resolve('bootstrap/dist/css/bootstrap.min.css'), './scss/**/*.scss'
+  require.resolve('bootstrap/dist/css/bootstrap.min.css'), 
+  require.resolve('fullpage.js/dist/jquery.fullpage.min.css'), 
+  './scss/**/*.scss'
+
 ])
   .pipe(Sass().on('error', Sass.logError))
   .pipe(PostCSS([ CSSNext() ]))
@@ -25,6 +28,7 @@ Gulp.task('js', () => Gulp.src([
   // (to get the /dist/... path, just look into the corresponding "node_modules" folder)
   require.resolve('jquery/dist/jquery.slim.min'),
   require.resolve('bootstrap/dist/js/bootstrap'),
+  require.resolve('fullpage.js/dist/jquery.fullpage.min'),
   './js/**/*.js',
 ])
   .pipe(Concat('bundle.js'))

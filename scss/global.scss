@@ -7,6 +7,12 @@
   margin: 0;
   padding: 0;
 }
+a{
+  &:hover, &:active, &:active, &:focus{
+    text-decoration: none;
+    color: $color--bg;
+  }
+}
 body {
   //background: url("img/hp.png");
   //height: 5480px;
@@ -21,7 +27,7 @@ body {
 
 .header {
   @extend .container;
-  height: 540px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,12 +47,12 @@ body {
     }
   }
   &__contact {
-    color: $color--secondary;
-    padding-bottom: 1px;
-    border-bottom: 2px solid $color--secondary;
+    color: $color--text;
+    //padding-bottom: 1px;
+    //border-bottom: 2px solid $color--secondary;
     &:hover {
-      color: $color--text;
-      border-bottom: 2px solid $color--text;
+      color: $color--secondary;
+      //border-bottom: 2px solid $color--text;
     }
   }
   &__logo-link,
@@ -55,26 +61,26 @@ body {
   }
   &__about {
     &--main{
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 700;
       line-height: 2;
       width: 800px;
-      margin-bottom: 0;
+      margin-bottom: 15px;
     }
     &--detailed{
-      font-size: 20px;
+      font-size: 17px;
       font-weight: 400;
       margin-bottom: 50px;
       margin-top: 0;
-      line-height: 2;
-      width: 800px;
+      line-height: 1.7;
+      width: 650px;
     }
   }
   &__name {
-    color: $color--secondary;
+    //color: $color--secondary;
   }
   &__job-title {
-    color: $color--primary;
+    //color: $color--secondary;
   }
 }
 .contact-buttons{
@@ -87,27 +93,52 @@ body {
   @extend .button;
   &--cv{
     background-color: $color--secondary;
+    transition: ease-in-out 0.3s;
+   &:hover{
+    transition: ease-in-out 0.3s;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px 0 rgba(128,109,239,0.80);
+   }
   }
   &--projects{
+   
     background-color: $color--additional;
+    transition: ease-in-out 0.3s;
+    &:hover{
+      transition: ease-in-out 0.3s;
+      box-shadow: 0 0 15px 0 #EAC25E;
+      transform: translateY(-5px);
+    }
   }
   &--linkedin{
     background-color: $color--primary;
+    transition: ease-in-out 0.3s;
+    &:hover{
+      transition: ease-in-out 0.3s;
+      box-shadow: 0 0 15px 0 #EB8081;
+      transform: translateY(-5px);
+    }
   }
 }
-.projects{
-  @extend .container;
-  &__project{
-  }
-  &__item{
-    @extend .screen;
-    margin-bottom: 200px;
-  }
-}
+
 .project{
+  width: 960px;
+  margin: 0 auto;
   height: 500px;
   display: flex;
   border: 3px solid $color--clearGray;
+  &:hover{
+    //color: $color--bg;
+    cursor: pointer;
+    .project__description{
+      position: relative;
+      transform: translateX(-75px);
+      transition: ease-in 0.2s;
+      opacity: 1;
+      //border: 3px solid $color--clearGray;
+
+    }
+  }
   &__illustration{
     
   }
@@ -126,6 +157,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: ease-in 0.5s;
+    background-color: $color--bg;
   }
   &__title{
     font-size: 30px;
@@ -156,6 +189,14 @@ body {
   &__article{
     margin-right: 19px;
     margin-bottom: 20px;
+    transition: ease-in-out 0.3s;
+
+    &:hover{
+      cursor: pointer;
+      position: relative;
+      transform: translateY(-20px);
+      transition: ease-in-out 0.3s;
+    }
     &:nth-child(3n){
       margin-right: 0;
     }
@@ -222,8 +263,8 @@ body {
     @extend .container;
     display: flex;
     justify-content: space-between;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   &__link{
     @extend .link;
@@ -329,5 +370,32 @@ body {
     margin-top: 80px;
     width: 110%;
     margin-left: -1%;
+  }
+}
+#fp-nav {
+  ul{
+    li{
+      margin: 15px 20px;
+      .fp-tooltip.right{
+      }
+      a{
+        span{
+          background: $color--clearGray;
+          height: 10px;
+          width: 10px;
+          margin: -5px 0 0 -5px;
+        }
+      }
+    }
+  }
+  li{
+    .active{
+      span{
+        background: #ffffff;
+        border: 2px $color--clearGray solid;
+        height: 4px;
+        width: 4px;
+      }
+    }
   }
 }
