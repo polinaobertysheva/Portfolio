@@ -29,6 +29,7 @@ Gulp.task('js', () => Gulp.src([
   require.resolve('jquery/dist/jquery.slim.min'),
   require.resolve('bootstrap/dist/js/bootstrap'),
   require.resolve('fullpage.js/dist/jquery.fullpage.min'),
+  require.resolve('scrollreveal/dist/scrollreveal.min'), 
   './js/**/*.js',
 ])
   .pipe(Concat('bundle.js'))
