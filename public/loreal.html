@@ -1,0 +1,211 @@
+<?php include("/home/polinaobwn/www/password_protect.php"); ?>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>L'Oréal Image Bank</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="./img/favicon.png" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header header__internal">
+    <nav class="header__navigation">
+      <div class="header__logo">
+        <a class="header__logo-link" href="./">POLINA O.</a>
+      </div>
+      <div class="header__contact">
+        <a class="header__contact-link" href="mailto:polina.obertysheva@gmail.com">Prenons un café</a>
+      </div>
+    </nav>
+  </header>
+  <section class="case-study">
+    <article class="case-study__header">
+      <h2 class="case-study__date">Décembre 2018</h2>
+      <h1 class="case-study__title">L’Oréal Image Bank</h1>
+      <h2 class="case-study__tags">Product Design | UX | UI | Intégration</h2>
+      <div class="case-study__image-wrapper">
+        <img alt="" src="./img/loreal0.png" class="case-study__image" />
+      </div>
+    </article>
+    <article class="case-study__overview paragraphe">
+      <h3 class="paragraphe__title">Contexte du projet</h3>
+      <p class="paragraphe__text">
+        Le département Product Performance Evaluation avait pour objectif de créer une banque d’images contenant des photographies
+        issues de tests de produits cosmétiques.
+      </p>
+      <p class="paragraphe__text--bold">
+        L’équipe Saegus dont je faisais partie a été appelé pour cadrer le projet et fournir la documentation fonctionnelle.
+      </p>
+      <p class="paragraphe__text">
+        Le projet a démarré avec une thématique assez généraliste : la création d’une base de données centralisée d’images. Afin
+        de préciser la problématique, le chef de projet a mené une session de définition de vision produit. Lors de cette
+        session, trois problématiques principales sont ressorties : l'acquisition, le traitement et la recherche des images.
+      </p>
+      <p class="paragraphe__text">
+        La mission consistait à cadrer le projet, c’est-à dire:
+        <ul class="paragraphe__list">
+          <li>
+            Réfléchir et décrire les fonctionnalités principales
+          </li>
+          <li>
+            Donner aux futurs créateurs de l'application une idée de l’interface afin qu’il puisse se projeter et estimer correctement
+            le projet.
+          </li>
+        </ul>
+      </p>
+      <p class="paragraphe__text">
+        Pour accélerer le cadrage du projet, nous avons décidé de mener une session de Design Sprint.
+      </p>
+    </article>
+    <article class="case-study__problem paragraphe">
+      <h3 class="paragraphe__title">Définition de la problématique</h3>
+      <p class="paragraphe__text">
+        Pour le Design Sprint, nous avons choisi de nous concentrer sur la problematique de recherche d'images car tous les utilisateurs
+        sont amenés à en faire lors de leur travail quotidien.
+      </p>
+      <p class="paragraphe__text">
+        En général, les employés de L’Oréal recherchent des images pour faire des rapports ou réaliser des présentations. Malgré
+        cela, aujourd’hui il n’existe aucun outil centralisé facilitant l’accès à celles-ci. La recherche d’une photo convenante
+        peut prendre quelques jours: certaines études contiennent plusieures centaines d’images, d’autres, plusieurs milliers.
+      </p>
+      <p class="paragraphe__text">
+        L'enjeu de la missions était de concevoir un parcours de recherche fluide en tenant compte de la multitude des critères disponibles
+        sur chaque image.
+      </p>
+    </article>
+    <article class="case-study__color-insertion color-insertion">
+      <p class="color-insertion__content">
+        Comment optimiser la recherche des images issues des tests de produits ?
+      </p>
+    </article>
+    <article class="case-study__personae paragraphe">
+      <h3 class="paragraphe__title">Personae et cas d’usages</h3>
+      <p class="paragraphe__text">
+        Les utilisateurs principaux de l’application sont les employés de l’Oréal chargés d’études des produits.
+      </p>
+      <p class="paragraphe__text ololo">
+        Lors de la définitino de vision produit, nous avons identifié 6 personae. Pour le Design Sprint, nous nous sommes concentrés
+        sur la recherche car cet usage est commun à la majorité des personae. Voici les fonctionnalités principales faisant
+        partie de cet usage :
+      </p>
+      <ul class="paragraphe__text paragraphe__list">
+        <li>
+          Trouver rapidement une image par numéro de formule, numéro d’étude etc…
+        </li>
+        <li>
+          Filtrer les images par zone de visage, temps de prise et d’autres critère
+        </li>
+        <li>
+          Télécharger une image choisie
+        </li>
+        <li>
+          Ajouter une image choisie dans la sélection pour la retrouver plus tard
+        </li>
+        <li>
+          Consulter les détails d’une image
+        </li>
+        <li>
+          Télécharger une image en taille réduite.
+        </li>
+      </ul>
+      <div class="paragraphe__middle-image-wrapper">
+        <img src="./img/loreal3.png" alt="audit et benchmark vivarte" class="paragraphe__middle-image" />
+      </div>
+    </article>
+    <article class="case-study__designing-process paragraphe">
+      <h3 class="paragraphe__title">Processus de conception</h3>
+      <p class="paragraphe__text">
+        Generalement, un Design Sprint est constitué de 5 phases : comprendre, idéer, concevoir, prototyper et tester. L’ensemble
+        de l’équipe participe à tous les exercices. Pour notre mission, nous avons passé une journée par phase.
+      </p>
+      <p class="paragraphe__text">
+        Lors de la première journée, nous avons fait un petit rappel de la session de vision produit et avons proposé plusieurs scénarios
+        d’utilisation de la future application </p>
+      <div class="paragraphe__small-image-wrapper">
+        <img src="./img/loreal4.png" alt="audit et benchmark vivarte" class="paragraphe__small-image" />
+      </div>
+      <p class="paragraphe__text">
+        La matinée de la deuxième journée a été dédié aux benchmark: nous avons étudié le fonctionnement des banques d’images et
+        des sites e-commerce.
+      </p>
+      <div class="paragraphe__small-image-wrapper">
+        <img src="./img/loreal5.png" alt="audit et benchmark vivarte" class="paragraphe__small-image" />
+      </div>
+      <p class="paragraphe__text">
+        L’après-midi de cette même journée, nous nous sommes concentrés sur l’idéation en proposant des idées différentes afin de
+        répondre à la problématique du Sprint.
+      </p>
+      <div class="paragraphe__small-image-wrapper">
+        <img src="./img/loreal6.png" alt="audit et benchmark vivarte" class="paragraphe__small-image" />
+      </div>
+      <p class="paragraphe__text">
+        Nous avons évalué ensuite les idées proposées et choisi une ligne directrice pour le prototype finale.
+      </p>
+      <div class="paragraphe__small-image-wrapper">
+        <img src="./img/loreal7.png" alt="audit et benchmark vivarte" class="paragraphe__small-image" />
+      </div>
+
+      <p class="paragraphe__text">
+        Lors de la quatrième journée du Sprint, nous avons produit le prototype cliquable qui a été soumis aux utilisateurs le lendemain.
+      </p>
+      <div class="paragraphe__middle-image-wrapper">
+        <img src="./img/loreal8.png" alt="audit et benchmark vivarte" class="paragraphe__middle-image" />
+      </div>
+      <p class="paragraphe__text">
+        Lors des tests, nous avons eu beaucoup de retours positifs et beaucoup de pistes d’amélioration. Nous avons analysé, trié
+        l’ensemble des retours et réalisé une restitution des tests utilisateurs à joindre au cahier des charges.
+      </p>
+    </article>
+    <article class="case-study__retro paragraphe">
+      <h3 class="paragraphe__title">Retrospective du projet</h3>
+      <p class="paragraphe__text">
+        L’Oréal Image Bank est l'un des projets les plus intéressants de mon expérience. La logique business complexe a forcé à pousser
+        notre réflexion pour proposer une solution ergonomique. Le format court et intensif des ateliers Design Sprint a
+        permis de mettre les compétences de tous les membres de l’équipe au profit de la mission.
+      </p>
+      <p class="paragraphe__text">
+        Pour moi ce projet a démontré la capacité du design à faciliter la vie des employés des grandes sociétés.
+      </p>
+      <div>
+          <ul class="case-study__contact-buttons contact-buttons">
+              <li class="contact-button-wrapper">
+                <a href="https://www.linkedin.com/in/polinaobertysheva/" target="_blank" class="contact-button contact-button--linkedin">
+                  Ajoutez moi sur Linkedin
+                </a>
+              </li>
+              <li class="contact-button-wrapper">
+                <a href="#L'oreal" class="contact-button contact-button--projects">
+                  Découvrez mes projets
+                </a>
+              </li>
+              <li class="contact-button-wrapper">
+                <a href="./CV_Polina_Obertysheva_2018.pdf" class="contact-button contact-button--cv" download>
+                  Téléchargez mon CV
+                </a>
+              </li>
+            </ul>
+      </div>
+    </article>
+  </section>
+  <footer class="footer">
+    <ul class="footer__links">
+      <!-- <li class="footer__item">
+          <a class="footer__link" href="#">@po-link-a</a>
+        </li> -->
+      <li class="footer__item">
+        <a class="footer__link" href="mailto:polina.obertysheva@gmail.com">polina.obertysheva@gmail.com</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="https://www.linkedin.com/in/polinaobertysheva/">in/polinaobertysheva</a>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="bundle.js"></script>
+</body>
+
+</html>
