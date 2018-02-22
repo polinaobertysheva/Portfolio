@@ -3,4 +3,6 @@ npm-debug.log
 .DS_Store
 public/**/*
 !public/*.html
+!public/*.php
+
 
